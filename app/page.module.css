@@ -1,0 +1,825 @@
+.page {
+  --gray-rgb: 0, 0, 0;
+  --gray-alpha-200: rgba(var(--gray-rgb), 0.08);
+  --gray-alpha-100: rgba(var(--gray-rgb), 0.05);
+
+  --button-primary-hover: #383838;
+  --button-secondary-hover: #f2f2f2;
+
+  display: grid;
+  grid-template-rows: 20px 1fr 20px;
+  grid-template-columns: 100%;
+  align-items: center;
+  justify-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  gap: 64px;
+  gap: 32px;
+  font-family: var(--font-geist-sans);
+
+  overflow: scroll;
+
+  background: rgb(206,195,224);
+  background: radial-gradient(circle, rgba(206,195,224,1) 0%, rgba(192,203,215,1) 100%);
+
+  padding-top: 60px;
+}
+
+/* Navbar styles*/
+.navbar {
+  width: 100%; 
+  height: 60px; 
+  background: rgb(136,125,156);
+  background: radial-gradient(circle, rgba(136,125,156,1) 0%, rgba(148,187,233,1) 100%);
+  color: rgb(1, 1, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: fixed; 
+  top: 0;
+  left: 0;
+  z-index: 1000; 
+}
+
+/* Mascot Home page Image styles */
+.mascot {
+  position: relative;
+  top: -100px;
+}
+
+/* FindHovBtn Button styles */
+.findHovBtn {
+  background: linear-gradient(145deg, #6e7f7e, #3b4343);
+  border: 2px solid #3b4343;
+  border-radius: 50px;
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+  padding: 18px 36px;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2), -4px -4px 8px rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+  position: relative;
+  top: -200px;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+/* FindHovBtn Hover effect */
+.findHovBtn:hover {
+  background: linear-gradient(145deg, #3b4343, #6e7f7e);
+  border: 2px solid #6e7f7e;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2), -4px -4px 8px rgba(255, 255, 255, 0.2);
+  transform: translateY(-4px);
+}
+
+/* FindHovBtn Active animation */
+.findHovBtn:active {
+  transform: translateY(2px);
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1), -2px -2px 6px rgba(255, 255, 255, 0.1);
+}
+
+/* Position of input box and current location button  */
+.resultsPageSpacing {
+  position: relative;
+  top: -250px;
+}
+
+/* Location input box */ 
+.locationInput {
+  position: absolute;
+  top: 50px;
+  margin-bottom: 1rem;
+  margin-top: 4rem;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  position: relative;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  overflow: hidden;
+  padding: 9px;
+  cursor: text;
+  background: #464646;
+  border-color: gray;
+  color: white;
+  font-size: x-large;
+  width: 30rem;
+}
+.locationInput:hover {
+  border-color: white;
+}
+
+/* OR text and lines */
+.orText {
+  text-align: center;
+  width: 50%;
+  border-bottom: 1px solid #000;
+  line-height: 0.1rem;
+  margin: 10px 0 20px;
+}
+.orSpan {
+  background: radial-gradient(circle, rgba(206,195,224,1) 0%, rgba(192,203,215,1) 100%);
+  padding: 0 10px;
+}
+.centerOrDiv {
+  position: relative;
+  top: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Current Location Button */ 
+.currentLocBtn {
+  position: relative;
+  top: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  color: #7e97b8;
+  background-color: #e0e8ef;
+  border-style: solid;
+  border-width: 2px 2px 2px 2px;
+  border-color: rgba(255, 255, 255, 0.333);
+  border-radius: 40px 40px 40px 40px;
+  padding: 16px 24px 16px 28px;
+  transform: translate(0px, 0px) rotate(0deg);
+  transition: 0.2s;
+  box-shadow: -4px -2px 16px 0px #ffffff, 4px 2px 16px 0px rgb(95 157 231 / 48%);
+ }
+ 
+ .currentLocBtn:hover {
+  color: #516d91;
+  background-color: #E5EDF5;
+  box-shadow: -2px -1px 8px 0px #ffffff, 2px 1px 8px 0px rgb(95 157 231 / 48%);
+ }
+ 
+ .currentLocBtn:active {
+  box-shadow: none;
+ }
+
+ .currentLocBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  margin: 0 auto;
+  padding-bottom:10px;
+}
+
+/* Results Card */
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.card {
+  display: flex;
+  border: 2px solid #ccc;
+  border-radius: 15px;
+  padding: 15px;
+  margin: 10px;
+  background-color: #f9f9f9;
+  position: relative;
+  top: -18rem;
+  width: 25rem;
+  visibility: hidden;
+  animation: slideIn 0.6s ease-out forwards; 
+}
+.card:nth-child(1) {
+  animation-delay: 0s;
+}
+.card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.card:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.details {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.titleLane {
+  font-size: 24px;
+  color: #00aaff;
+  margin-bottom: 10px;
+}
+.etaBox {
+  font-size: 18px;
+  margin-bottom: 20px;
+  border: 1px solid rgb(207, 203, 198);
+  border-radius: 10px;
+  box-shadow: -2px -1px 8px 0px #ffffff, 2px 1px 8px 0px rgb(95 157 231 / 48%);
+  width: 40%;
+  padding: 0.5rem;
+}
+.carIcon {
+  margin-right: 8px;
+}
+.selectButton {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35%;
+  margin-left: 16rem;
+
+  margin-left: 0rem;
+  width: 100%;
+  cursor: pointer;
+}
+.selectButton:hover {
+  background-color: #516d91;;
+  box-shadow: -2px -1px 8px 0px #ffffff, 2px 1px 8px 0px rgb(95 157 231 / 48%);
+}
+.arrowIcon {
+  margin-left: 8px;
+}
+
+/* Autocomplete Links Style*/
+.links {
+  cursor: pointer;
+  padding: 10px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #ddd;
+  transition: background-color 0.2s ease-in-out;
+  font-size: 16px;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+}
+
+.links strong {
+  font-weight: bold;
+}
+
+.links small {
+  color: #665;
+  font-size: 12px;
+}
+
+.links:hover {
+  background-color: #f0f0f0;
+}
+
+.suggestionsList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute; 
+  top: 80%;
+  left: 3%;
+  width: 95%;
+  max-width: 500px;
+  background: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  z-index: 10;
+  overflow: hidden;
+}
+
+
+.locationInput:focus {
+  border-color: #007bff;
+}
+
+/* Loading icon styles */
+.loader {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: x-large;
+  font-weight: bold;
+  gap: 10px;
+  top: 60%;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.spinnerIcon {
+  display: inline-block;
+  animation: spin 2.5s linear infinite;
+}
+
+/* Restart btn styles */
+.restartBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  width: 70%;
+  z-index: 10;
+  position: relative; 
+  top: -20rem;
+  gap: 10px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  color: #7e97b8;
+  background-color: #e0e8ef;
+  border-style: solid;
+  border-width: 2px 2px 2px 2px;
+  border-color: rgba(255, 255, 255, 0.333);
+  border-radius: 40px 40px 40px 40px;
+  padding: 16px 24px 16px 28px;
+  transform: translate(0px, 0px) rotate(0deg);
+  transition: 0.2s;
+  box-shadow: -4px -2px 16px 0px #ffffff, 4px 2px 16px 0px rgb(95 157 231 / 48%);
+
+  margin-top: -400px;
+  padding: 12px 24px;
+}
+.restartBtn:hover {
+  color: #516d91;
+  background-color: #E5EDF5;
+  box-shadow: -2px -1px 8px 0px #ffffff, 2px 1px 8px 0px rgb(95 157 231 / 48%);
+ }
+ 
+ .restartBtn:active {
+  box-shadow: none;
+ }
+
+  /* Large Laptop Styles */
+  @media (max-width: 1920px) {
+
+      .titleLane {
+        margin-top: 10px;
+        font-size: 24px;
+      }
+  
+      /* Adjusting Restart Button on Large Laptop */
+      .restartBtn {
+        margin-top: -380px;
+      }
+  
+    /* Adjusting loader on Large Laptop */
+    .loader {
+      left: 50%;  
+      transform: translate(-50%, -50%);
+      width: 100%;
+    }
+  }
+
+  /* Medium Laptop Styles */
+@media (max-width: 1470px) {
+  .resultsPageSpacing {
+    top: -250px; 
+  }
+
+    /* Adjusting Cards on Medium Laptop */
+    .card {
+      top: -20rem;
+    }
+
+    .titleLane {
+      margin-top: 1px;
+      font-size: 20px;
+    }
+
+    /* Adjusting Restart Button on Meduium Laptop */
+    .restartBtn {
+      margin-top: -180px;
+    }
+
+  /* Adjusting loader on Medium Laptop */
+  .loader {
+    left: 50%;  
+    transform: translate(-50%, -50%);
+    width: 100%;
+  }
+}
+
+ /* Large Tablet Device Styles */
+@media (max-width: 1024px) {
+  .resultsPageSpacing {
+    top: -250px; 
+  }
+    /* Adjusting Restart Button on Large Tablet */
+    .restartBtn {
+      margin-top: -800px;
+    }
+
+  /* Adjusting loader on Large Tablet */
+  .loader {
+    left: 50%;  
+    transform: translate(-50%, -50%);
+    width: 100%;
+  }
+
+  .titleLane {
+    margin-top: 16px;
+    font-size: 24px;
+  }
+}
+
+ /* Medium Tablet Device Styles */
+ @media (max-width: 834px) {
+  .resultsPageSpacing {
+    top: -250px; 
+  }
+    /* Adjusting Restart Button on Medium Tablet */
+    .restartBtn {
+      margin-top: -700px;
+    }
+}
+
+ /* Small Tablet Device Styles */
+ @media (max-width: 768px) {
+  .resultsPageSpacing {
+    top: -250px; 
+  }
+    /* Adjusting Restart Button on Small Tablet */
+    .restartBtn {
+      margin-top: -400px;
+    }
+}
+
+ /* XS Tablet Device Styles */
+ @media (max-width: 700px) {
+  .resultsPageSpacing {
+    top: -250px; 
+  }
+
+    /* Adjusting Cards on XS Tablet */
+    .card {
+      width: 80%;
+      max-width: 22rem;
+      top: -25rem;
+      margin-right: auto;
+      margin-left: auto;
+      padding-top: 0px;
+      padding-bottom: 5px;
+    }
+
+    .titleLane {
+      font-size: medium;
+    }
+  
+    .etaBox {
+      width: 40%;
+      font-size: medium;
+    }
+  
+    .selectButton {
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: x-small;
+    }
+
+    /* Adjusting Restart Button on XS Tablet */
+    .restartBtn {
+      top: -25rem;
+      margin-top: 50px;
+    }
+
+}
+
+/* General Mobile Styles */
+@media (max-width: 500px) {
+  .resultsPageSpacing {
+    top: -300px;
+  }
+
+  /* Adjusting Location Input Box */
+  .locationInput {
+    width: 100%; 
+    max-width: 25rem;
+    font-size: x-large;
+  }
+  
+  /* Adjusting Centering the OR text */
+  .centerOrDiv {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+  
+  /* Adjusting Current Location Button */
+  .currentLocBtn {
+    width: auto;
+    max-width: 14rem;
+    padding: 0.2rem 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: medium;
+  }
+  
+
+  /* Adjusting Cards */
+  .card {
+    width: 75%;
+    max-width: 22rem;
+    top: -25rem;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 0px;
+    padding-bottom: 5px;
+  }
+
+  .titleLane {
+    font-size: 20px;
+    font-size: medium;
+  }
+
+  .etaBox {
+    width: 41%;
+    font-size: medium;
+  }
+
+  .selectButton {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: x-small;
+  }
+
+  /* Adjusting Autocomplete Suggestions List */
+  .suggestionsList {
+    max-width: 95%; 
+    left: 3%;
+  }
+
+  /* Adjusting loader */
+  .loader {
+    font-size: large;
+    top: 65%;
+    left: 50%;  
+    transform: translate(-50%, -50%);
+    width: 100%;
+  }
+
+  /* Adjusting Restart Button */
+  .restartBtn {
+    top: -25rem;
+    margin-top: -160px;
+  }
+}
+
+/* Medium Mobile Devices Styles */
+@media (max-width: 418px) {
+  .resultsPageSpacing {
+    top: -300px;
+  }
+  
+  /* Adjusting Cards on Medium devices*/
+  .card {
+    width: 75%;
+    max-width: 22rem;
+    top: -25rem;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 0px;
+    padding-bottom: 5px;
+  }
+
+  .titleLane {
+    font-size: medium;
+  }
+
+  .etaBox {
+    width: 43%;
+    font-size: medium;
+    margin-top: 10px;
+  }
+
+  .selectButton {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: x-small;
+  }
+
+  /* Adjusting Restart Button on Medium devices*/
+  .restartBtn {
+    top: -25rem;
+    margin-top: -70px;
+  }
+}
+
+/* XM Mobile Device Styles */
+@media (max-width: 395px) {
+  .resultsPageSpacing {
+    top: -250px; 
+  }
+  /* Adjusting Cards on XM devices*/
+  .card {
+    width: 70%;
+    max-width: 22rem;
+    top: -22rem;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 0px;
+    padding-bottom: 5px;
+
+  }
+
+  .titleLane {
+    font-size: small;
+  }
+
+  .etaBox {
+    width: 43%;
+    font-size: small;
+    margin-top: 8px;
+  }
+
+  .selectButton {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: x-small;
+  }
+    /* Adjusting Restart Button on XM devices */
+    .restartBtn {
+      top: -22rem;
+      margin-top: -160px;
+      font-size: small;
+      width: 60%;
+    }
+
+    /* Adjusting Landing Page btn on XM devices*/
+    .findHovBtn {
+      font-size: large;
+    }
+
+    /* Adjusting loader on XM devices */
+    .loader {
+      top: 80%;
+    }
+}
+
+
+/* Small Mobile Device Styles */
+@media (max-width: 385px) {
+  .resultsPageSpacing {
+    top: -250px; 
+  }
+
+  /* Adjusting Location Input Box on Small devices*/
+  .locationInput {
+    width: 100%; 
+    max-width: 25rem;
+    font-size: x-large;
+  }
+  
+  /* Centering the OR text on Small devices */
+  .centerOrDiv {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+  
+  /* Adjusting Current Location Button on Small devices */
+  .currentLocBtn {
+    width: auto;
+    max-width: 14rem;
+    padding: 0.2rem 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 15px;
+  }
+
+  /* Adjusting Cards on Small devices*/
+  .card {
+    width: 60%;
+    max-width: 22rem;
+    top: -12rem;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 0px;
+    padding-bottom: 5px;
+  }
+
+  .titleLane {
+    font-size: small;
+  }
+
+  .etaBox {
+    width: 40%;
+    font-size: x-small;
+    margin-top: 1px;
+    margin-bottom: 10px;
+
+  }
+
+  /* Adjusting loader on Small devices */
+  .loader {
+    top: 75%;
+  }
+
+  .selectButton {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: x-small;
+    padding: 6px;
+  }
+
+    /* Adjusting Restart Button on Small devices */
+    .restartBtn {
+      top: -12rem;
+      margin-top: -240px;
+      font-size: x-small;
+      padding: 8px;
+      width: 55%;
+    }
+
+    /* Adjusting Landing Page btn on Small devices */
+    .findHovBtn {
+      font-size: large;
+    }
+}
+
+/* XM Mobile Device Styles */
+@media (max-width: 370px) {
+  .resultsPageSpacing {
+    top: -250px; 
+  }
+  /* Adjusting Cards on XM devices*/
+  .card {
+    width: 60%;
+    max-width: 22rem;
+    top: -17rem;
+  }
+  .etaBox {
+    width: 40%;
+    font-size: x-small;
+  }
+
+    /* Adjusting Restart Button on XM devices */
+    .restartBtn {
+      top: -17rem;
+      margin-top: -200px;
+      font-size: x-small;
+      padding: 8px;  
+      width: 50%;
+    }
+}
+
+
+/* XS Mobile Device Styles */
+@media (max-width: 344px) {
+  .resultsPageSpacing {
+    top: -250px; 
+  }
+  /* Adjusting Cards on XS devices*/
+  .card {
+    width: 60%;
+    max-width: 22rem;
+    top: -25rem;
+  }
+  .etaBox {
+    width: 40%;
+    font-size: x-small;
+  }
+    /* Adjusting Restart Button on XS devices */
+    .restartBtn {
+      top: -25rem;
+      margin-top: -180px;
+    }
+}
+
+
