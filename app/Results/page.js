@@ -152,8 +152,8 @@ const Results = () => {
                 ))}
             </div>
             <footer className={styles.footer}>
-    @uhcl senior project sylvia gichana
-        </footer>
+                @uhcl senior project sylvia gichana
+            </footer>
 
         </div>
     );
