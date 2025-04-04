@@ -151,6 +151,9 @@ const Results = () => {
                 <HovLaneCard key={index} lane={lane} /> 
                 ))}
             </div>
+            <footer className={styles.footer}>
+    @uhcl senior project sylvia gichana
+        </footer>
 
         </div>
     );
