@@ -1,3 +1,6 @@
+Navigating HOV entrances in Harris County, TX, can be challenging due to their obscure locations and complex traffic patterns. The Harris County Toll Road Authority (HCTRA) manages a network of toll roads, including IH-45, which has a single reversible lane that changes direction based on the time of day. This project will develop a web-based HOV Entrance Locator to help commuters find and access HOV and toll road entrances more efficiently. By integrating with existing map applications, the tool will improve route planning and reduce travel time.
+
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
