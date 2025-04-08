@@ -1,5 +1,8 @@
+![portal-guide-logo](https://github.com/user-attachments/assets/3a55e0e5-f392-4908-a155-8cebc46c5267)
+
 Navigating HOV entrances in Harris County, TX, can be challenging due to their obscure locations and complex traffic patterns. The Harris County Toll Road Authority (HCTRA) manages a network of toll roads, including IH-45, which has a single reversible lane that changes direction based on the time of day. This project will develop a web-based HOV Entrance Locator to help commuters find and access HOV and toll road entrances more efficiently. By integrating with existing map applications, the tool will improve route planning and reduce travel time.
 
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
@@ -16,9 +19,6 @@ pnpm dev
 # or
 bun dev
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
 You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
